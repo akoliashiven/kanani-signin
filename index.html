@@ -35,11 +35,19 @@
         padding: 32px 24px calc(48px + env(safe-area-inset-bottom));
         background: #1c2a22;
         color: #f4f1e8;
-        font: 17px/1.45 -apple-system, BLinkMacSystemFont, 'Helvetica Neue', sans-serif;
+        font:
+          17px/1.45 -apple-system,
+          BLinkMacSystemFont,
+          'Helvetica Neue',
+          sans-serif;
       }
       h1 {
         margin: 0 0 12px;
-        font: 400 40px/1.08 'New York', 'Iowan Old Style', Georgia, serif;
+        font:
+          400 40px/1.08 'New York',
+          'Iowan Old Style',
+          Georgia,
+          serif;
         letter-spacing: -0.01em;
       }
       p {
@@ -81,8 +89,9 @@
         var problem = params.get('error_description') || fragment.get('error_description');
 
         if (!code) {
-          if (problem) document.getElementById('reason').textContent =
-            problem.replace(/\+/g, ' ') + '. Go back to Kanani and ask for a new sign-in email.';
+          if (problem)
+            document.getElementById('reason').textContent =
+              problem.replace(/\+/g, ' ') + '. Go back to Kanani and ask for a new sign-in email.';
           document.getElementById('failed').hidden = false;
           return;
         }
